@@ -8,9 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.androiddemo.MainActivity" >
 
-    <TextView
+    <!-- <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world" /> -->
+    
+    <View
+            android:layout_width="360dp"
+            android:layout_height="519dp"
+            android:background="@android:color/darker_gray"/>
 
 </RelativeLayout>
