@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff7800">
+
+    <ImageButton 
+        android:id="@+id/btn_slide"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lines_3"
+        android:paddingLeft="20dp"
+        android:onClick="toggleMenu"
+        android:paddingTop="10dp"/>
+    
+    <TextView
+            	android:layout_width="300dp"
+            	android:layout_height="40dp"
+            	android:text="Cathy Lee"
+            	android:textColor="#FFFFFF"  
+            	android:textSize="20sp"
+            	android:paddingLeft="130dp"
+            	android:paddingTop="10dp"
+            	android:layout_marginLeft="10dp"
+            	android:textStyle="bold" />
+    
+    <ImageButton 
+        android:id="@+id/btn_slide2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:paddingLeft="310dp"
+        android:src="@drawable/arrow_2"
+        android:onClick="returnback"
+        android:paddingTop="10dp"/>
+    
+</RelativeLayout>

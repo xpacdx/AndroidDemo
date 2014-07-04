@@ -8,12 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class LoginPage extends Activity {
+public class MenuStarBuck extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.loginpage);
+		setContentView(R.layout.menustarbuck);
 	}
 	
 
@@ -23,7 +23,7 @@ public class LoginPage extends Activity {
     	ActionBar actionBar = getActionBar();
     	actionBar.setDisplayShowHomeEnabled(false);
     	//displaying custom ActionBar
-    	View mActionBarView = getLayoutInflater().inflate(R.layout.nullactionbar, null);
+    	View mActionBarView = getLayoutInflater().inflate(R.layout.menumenuactionbar, null);
     	actionBar.setCustomView(mActionBarView);
     	actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     	
@@ -41,8 +41,14 @@ public class LoginPage extends Activity {
     }
     
     public void startbutton(View v) {
-		Intent intent = new Intent(LoginPage.this, FirstPage.class);
+		Intent intent = new Intent(MenuStarBuck.this, ReceiptStarBuck.class);
 		startActivity(intent);
-		LoginPage.this.finish();
+		MenuStarBuck.this.finish();
+	}
+    
+    public void toggleMenu(View v) {
+		Intent intent = new Intent(MenuStarBuck.this, Person.class);
+		startActivity(intent);
+		MenuStarBuck.this.finish();
 	}
 }

@@ -35,16 +35,44 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
         </activity>
 
         <activity 
         	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
         	android:name="com.example.androiddemo.LoginPage">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
         	android:name="com.example.androiddemo.FirstPage">
+        </activity>
+        
+        <activity 
+        	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
+        	android:name="com.example.androiddemo.WelcomeStarBuck">
+        </activity>
+        
+        <activity 
+        	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
+        	android:name="com.example.androiddemo.MenuStarBuck">
+        </activity>
+        
+        <activity 
+        	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
+        	android:name="com.example.androiddemo.ReceiptStarBuck">
+        </activity>
+        
+        <activity 
+        	android:label="@string/shopping_list"
+        	android:theme="@style/FirstPageStyle"
+        	android:name="com.example.androiddemo.Person">
+        	
         </activity>
         	
     </application>
