@@ -19,7 +19,11 @@
     </style> -->
     <style name="WelcomeTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen" />
     
-    <!--<style name="FirstPageStyle" parent="android:style/Theme.AppCompat.Light">  
+    <style name="FirstPageStyle">
+        <item name="android:background">#f14c57</item>
+    </style>
+    
+    <!-- <style name="FirstPageStyle" parent="android:style/Theme.AppCompat.Light">  
         <item name="android:actionBarStyle">@style/MyActionBar</item>  
         <item name="android:actionBarDivider">@null</item>  
         <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>  
@@ -43,18 +47,13 @@
         <item name="backgroundStacked">@android:color/holo_green_dark</item>  
     </style>  -->
     
-    <style name="FirstPageStyle" parent="android:Theme.Holo.Light">  
-        <!-- API 14 theme customizations can go here. -->  
-        <item name="android:actionBarStyle">@style/my_actionbar_style</item>   
-    </style>  
-
-      
-    <style name="my_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">  
-        <item name="android:background">#ff7800</item>  
-        <item name="android:displayOptions"></item>
-    </style> 
-    
     <style name="AppTheme" parent="android:Theme.Light.NoTitleBar" />
+    
+    <style name="my_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">  
+        <item name="android:background">#647b97</item>  
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+        <item name="android:backgroundStacked">#4A708B</item>
+      </style>
     
     <style name="AcBar_titleStyle">
         <item name="android:textColor">#FFFFFF</item>    

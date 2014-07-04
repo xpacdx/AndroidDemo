@@ -1,6 +1,5 @@
 package com.example.androiddemo;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,13 +19,7 @@ public class LoginPage extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-    	ActionBar actionBar = getActionBar();
-    	actionBar.setDisplayShowHomeEnabled(false);
-    	//displaying custom ActionBar
-    	View mActionBarView = getLayoutInflater().inflate(R.layout.nullactionbar, null);
-    	actionBar.setCustomView(mActionBarView);
-    	actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-    	
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -36,7 +29,9 @@ public class LoginPage extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        
+        if (id == R.id.action_settings) {
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
     

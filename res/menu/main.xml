@@ -1,31 +1,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.demo.androiddemo.MainActivity"
+    >
 
-	<item android:id="@+id/menu_save1"  
-          android:icon="@drawable/lines_3"  
-          android:showAsAction="always"
-          android:menuCategory="container"/>  
-        
     <item
-        android:id="@+id/menu_save2"
-        android:showAsAction="withText"
-        android:title="商户列表"/>
-        
-    <item android:id="@+id/menu_save3"  
-          android:icon="@drawable/arrow_2"  
-          android:showAsAction="always" />
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
         
     <!--<item  
         android:id="@+id/menu_search"  
         android:actionViewClass="android.widget.SearchView"  
         android:icon="@drawable/ic_menu_search"  
         android:showAsAction="ifroom"  
-        android:title="搜索"/>  
+        android:title="搜索"/>    -->
     <item  
         android:id="@+id/menu_share"  
         android:actionProviderClass="android.widget.ShareActionProvider"  
         android:showAsAction="never"  
-        android:title="分享"/>    -->
+        android:title="分享"/>  
     <!-- <item  
         android:id="@+id/menu_setting"  
         android:actionProviderClass="com.example.tabdemo.MyActionProvider"  

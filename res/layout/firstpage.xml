@@ -18,7 +18,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="7dp"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/starbucks_logo" android:onClick="startbutton" />
+        android:src="@drawable/starbucks_logo" />
         
         <LinearLayout
     	android:orientation="vertical"
@@ -30,22 +30,20 @@
     		android:orientation="horizontal"
     		android:layout_width="260dp"
     		android:layout_height="40dp"
-    		android:layout_marginTop="15dp">
+    		android:layout_marginTop="10dp">
         
         		<TextView
             	android:layout_width="160dp"
             	android:layout_height="40dp"
             	android:text="星巴克"
-            	android:textColor="#000000"  
             	android:textSize="20sp"
-            	android:layout_marginLeft="10dp"
             	android:textStyle="bold" />
 
          		<ImageView
         		android:id="@+id/imageHeart1"
         		android:layout_width="30dp"
         		android:layout_height="30dp"
-        		android:layout_marginLeft="53dp"
+        		android:layout_marginLeft="70dp"
         		android:src="@drawable/heart_0" />
          	</LinearLayout>
          	
@@ -53,8 +51,7 @@
     		android:orientation="horizontal"
     		android:layout_width="260dp"
     		android:layout_height="30dp"
-    		android:layout_marginTop="5dp"
-    		android:layout_marginLeft="10dp">
+    		android:layout_marginTop="10dp">
         
                 <ImageView
         		android:id="@+id/imageClock1"
@@ -112,47 +109,28 @@
     		android:orientation="horizontal"
     		android:layout_width="260dp"
     		android:layout_height="40dp"
-    		android:layout_marginTop="15dp">
+    		android:layout_marginTop="10dp">
         
         		<TextView
-            	android:layout_width="100dp"
+            	android:layout_width="160dp"
             	android:layout_height="40dp"
             	android:text="希尔顿酒店"
-            	android:textColor="#000000"  
             	android:textSize="20sp"
-            	android:layout_marginLeft="10dp"
             	android:textStyle="bold" />
-
-        		
-        		<ImageView
-        		android:id="@+id/imageStone2"
-        		android:layout_width="30dp"
-        		android:layout_height="30dp"
-        		android:src="@drawable/icon"
-        		android:layout_marginLeft="25dp" />
-        		
-        		<TextView
-            	android:layout_width="40dp"
-            	android:layout_height="20dp"
-            	android:text="3750"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="5dp"/>
 
          		<ImageView
         		android:id="@+id/imageHeart2"
         		android:layout_width="30dp"
         		android:layout_height="30dp"
-        		android:layout_marginLeft="13dp"
-        		android:src="@drawable/heart_1" />
+        		android:layout_marginLeft="70dp"
+        		android:src="@drawable/heart_0" />
          	</LinearLayout>
          	
             <LinearLayout
     		android:orientation="horizontal"
     		android:layout_width="260dp"
-    		android:layout_height="30dp"
-    		android:layout_marginTop="5dp"
-    		android:layout_marginLeft="10dp">
+    		android:layout_height="20dp"
+    		android:layout_marginTop="10dp">
         
                 <ImageView
         		android:id="@+id/imageClock2"
@@ -170,268 +148,6 @@
 
          		<ImageView
         		android:id="@+id/imageComment2"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/comment" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="28 reviews"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-         	</LinearLayout>
-         </LinearLayout>
-	</LinearLayout>
-	
-    <LinearLayout
-    android:orientation="horizontal"
-    android:background="@drawable/gray_box"
-    android:layout_marginTop="10dp"
-    android:layout_width="360dp"
-    android:layout_height="94dp">
-    
-        <ImageView
-        android:id="@+id/imageIcon3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/ihg_logo" />
-        
-        <LinearLayout
-    	android:orientation="vertical"
-    	android:layout_width="260dp"
-    	android:layout_height="100dp"
-    	android:layout_marginLeft="10dp">
-    	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="40dp"
-    		android:layout_marginTop="15dp">
-        
-        		<TextView
-            	android:layout_width="160dp"
-            	android:layout_height="40dp"
-            	android:text="洲际酒店连锁"
-            	android:textColor="#000000"  
-            	android:textSize="20sp"
-            	android:layout_marginLeft="10dp"
-            	android:textStyle="bold" />
-
-         		<ImageView
-        		android:id="@+id/imageHeart3"
-        		android:layout_width="30dp"
-        		android:layout_height="30dp"
-        		android:layout_marginLeft="53dp"
-        		android:src="@drawable/heart_0" />
-         	</LinearLayout>
-         	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="30dp"
-    		android:layout_marginTop="5dp"
-    		android:layout_marginLeft="10dp">
-        
-                <ImageView
-        		android:id="@+id/imageClock3"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/clock" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="Today"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-
-         		<ImageView
-        		android:id="@+id/imageComment3"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/comment" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="28 reviews"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-         	</LinearLayout>
-         </LinearLayout>
-	</LinearLayout>
-	
-    <LinearLayout
-    android:orientation="horizontal"
-    android:background="@drawable/gray_box"
-    android:layout_marginTop="10dp"
-    android:layout_width="360dp"
-    android:layout_height="94dp">
-    
-        <ImageView
-        android:id="@+id/imageIcon4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/u_logo" />
-        
-        <LinearLayout
-    	android:orientation="vertical"
-    	android:layout_width="260dp"
-    	android:layout_height="100dp"
-    	android:layout_marginLeft="10dp">
-    	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="40dp"
-    		android:layout_marginTop="15dp">
-        
-        		<TextView
-            	android:layout_width="160dp"
-            	android:layout_height="40dp"
-            	android:text="美国联合航空"
-            	android:textColor="#000000"  
-            	android:textSize="20sp"
-            	android:layout_marginLeft="10dp"
-            	android:textStyle="bold" />
-
-         		<ImageView
-        		android:id="@+id/imageHeart4"
-        		android:layout_width="30dp"
-        		android:layout_height="30dp"
-        		android:layout_marginLeft="53dp"
-        		android:src="@drawable/heart_0" />
-         	</LinearLayout>
-         	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="30dp"
-    		android:layout_marginTop="5dp"
-    		android:layout_marginLeft="10dp">
-        
-                <ImageView
-        		android:id="@+id/imageClock4"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/clock" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="Today"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-
-         		<ImageView
-        		android:id="@+id/imageComment4"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/comment" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="28 reviews"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-         	</LinearLayout>
-         </LinearLayout>
-	</LinearLayout>
-	
-    <LinearLayout
-    android:orientation="horizontal"
-    android:background="@drawable/gray_box"
-    android:layout_marginTop="10dp"
-    android:layout_width="360dp"
-    android:layout_height="94dp">
-    
-        <ImageView
-        android:id="@+id/imageIcon5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/mar_logo" />
-        
-        <LinearLayout
-    	android:orientation="vertical"
-    	android:layout_width="260dp"
-    	android:layout_height="100dp"
-    	android:layout_marginLeft="10dp">
-    	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="40dp"
-    		android:layout_marginTop="15dp">
-        
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="40dp"
-            	android:text="万豪酒店"
-            	android:textColor="#000000"  
-            	android:textSize="20sp"
-            	android:layout_marginLeft="10dp"
-            	android:textStyle="bold" />
-
-        		
-        		<ImageView
-        		android:id="@+id/imageStone5"
-        		android:layout_width="30dp"
-        		android:layout_height="30dp"
-        		android:src="@drawable/icon"
-        		android:layout_marginLeft="25dp" />
-        		
-        		<TextView
-            	android:layout_width="40dp"
-            	android:layout_height="20dp"
-            	android:text="3750"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="5dp"/>
-
-         		<ImageView
-        		android:id="@+id/imageHeart5"
-        		android:layout_width="30dp"
-        		android:layout_height="30dp"
-        		android:layout_marginLeft="13dp"
-        		android:src="@drawable/heart_1" />
-         	</LinearLayout>
-         	
-            <LinearLayout
-    		android:orientation="horizontal"
-    		android:layout_width="260dp"
-    		android:layout_height="30dp"
-    		android:layout_marginTop="5dp"
-    		android:layout_marginLeft="10dp">
-        
-                <ImageView
-        		android:id="@+id/imageClock5"
-        		android:layout_width="20dp"
-        		android:layout_height="20dp"
-        		android:src="@drawable/clock" />
-                
-        		<TextView
-            	android:layout_width="100dp"
-            	android:layout_height="20dp"
-            	android:text="Today"
-            	android:textSize="15sp"
-            	android:textStyle="bold" 
-            	android:layout_marginLeft="10dp"/>
-
-         		<ImageView
-        		android:id="@+id/imageComment5"
         		android:layout_width="20dp"
         		android:layout_height="20dp"
         		android:src="@drawable/comment" />
