@@ -15,7 +15,7 @@ public class LoginPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.loginpage);
 	}
-	
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
