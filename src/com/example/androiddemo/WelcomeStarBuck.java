@@ -46,7 +46,7 @@ public class WelcomeStarBuck extends Activity {
     private NotificationManager notificationManager;    
 	private LeDeviceListAdapter adapter;
 	private int counter=0;
-	
+	private long initialtime= System.currentTimeMillis();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -98,7 +98,7 @@ public class WelcomeStarBuck extends Activity {
 		        ;
 		      }
 		    });
-	    
+	    initialtime= System.currentTimeMillis();
 	  }		
 	
 
@@ -256,23 +256,24 @@ public class WelcomeStarBuck extends Activity {
         	Intent intent = new Intent(WelcomeStarBuck.this, WelcomeStarBuck.class);
 		    startActivity(intent); 
         }
-*/   
-        if (counter%3==0)
+*/      
+        long currenttime=System.currentTimeMillis();
+        
+        if (currenttime-initialtime > 60000)
         {
-        	Intent intent = new Intent(WelcomeStarBuck.this, MenuStarBuck.class);
-		    startActivity(intent); 
+	        if (counter%2==0)
+	        {
+	        	Intent intent = new Intent(WelcomeStarBuck.this, MenuStarBuck.class);
+			    startActivity(intent); 
+	        }
+	        else if (counter%2==1)
+	        {
+	        	Intent intent = new Intent(WelcomeStarBuck.this, ReceiptStarBuck.class);
+			    startActivity(intent);         	
+	        }
+	        counter++;
+	        initialtime= System.currentTimeMillis(); 
         }
-        else if (counter%3==1)
-        {
-        	Intent intent = new Intent(WelcomeStarBuck.this, ReceiptStarBuck.class);
-		    startActivity(intent);         	
-        }
-        else if (counter%3==2)
-        {
-        	Intent intent = new Intent(WelcomeStarBuck.this, WelcomeStarBuck.class);
-		    startActivity(intent); 
-        }
-        counter++;
 
       }    
 }
