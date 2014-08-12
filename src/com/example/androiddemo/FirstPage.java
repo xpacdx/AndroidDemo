@@ -48,7 +48,6 @@ public class FirstPage extends Activity {
 	  
 	private BeaconManager beaconManager;
     private NotificationManager notificationManager;    
-	private LeDeviceListAdapter adapter;
 	private int counter=0;
 	
 	@Override
@@ -57,8 +56,7 @@ public class FirstPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.firstpage);
 	    getActionBar().setDisplayHomeAsUpEnabled(true);		
-	    // Configure device list.1
-	    adapter = new LeDeviceListAdapter(this);
+
 
 	    
 	    // Configure verbose debug logging.
@@ -84,7 +82,6 @@ public class FirstPage extends Activity {
 	              // Note that beacons reported here are already sorted by estimated
 	              // distance between device and beacon.
 	              getActionBar().setSubtitle("Found beacons: " + beacons.size());
-	              adapter.replaceWith(beacons);
 	            }
 	          });
 	        }
@@ -176,11 +173,7 @@ public class FirstPage extends Activity {
 
     @Override
     protected void onStop() {
-      try {
-        beaconManager.stopRanging(ALL_ESTIMOTE_BEACONS_REGION);
-      } catch (RemoteException e) {
-        Log.d(TAG, "Error while stopping ranging", e);
-      }
+//	  beaconManager.disconnect();
 
       super.onStop();
     }
@@ -199,8 +192,7 @@ public class FirstPage extends Activity {
     }
     
     private void connectToService() {
-        getActionBar().setSubtitle("Scanning...");
-        adapter.replaceWith(Collections.<Beacon>emptyList());
+
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
           @Override
           public void onServiceReady() {

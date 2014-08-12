@@ -45,4 +45,10 @@ public class LoginPage extends Activity {
 		startActivity(intent);
 		LoginPage.this.finish();
 	}
+    
+    public void startBeaconbutton(View v) {
+		Intent intent = new Intent(LoginPage.this, AllDemosActivity.class);
+		startActivity(intent);
+		LoginPage.this.finish();
+	}    
 }

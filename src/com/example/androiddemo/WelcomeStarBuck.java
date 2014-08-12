@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.widget.Toast;
 import android.bluetooth.BluetoothAdapter;
 import android.os.RemoteException;
 import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import android.app.NotificationManager;
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -25,6 +23,7 @@ import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
 import com.estimote.sdk.utils.L;
 import com.estimote.sdk.Utils;
+
 import static com.estimote.sdk.BeaconManager.MonitoringListener;
 
 import java.util.Collections;
@@ -44,7 +43,7 @@ public class WelcomeStarBuck extends Activity {
 	  
 	private BeaconManager beaconManager;
     private NotificationManager notificationManager;    
-	private LeDeviceListAdapter adapter;
+
 	private int counter=0;
 	private long initialtime= System.currentTimeMillis();
 	@Override
@@ -54,9 +53,6 @@ public class WelcomeStarBuck extends Activity {
 		setContentView(R.layout.starbuck);
 
 	    getActionBar().setDisplayHomeAsUpEnabled(true);		
-	    // Configure device list.1
-	    adapter = new LeDeviceListAdapter(this);
-
 	    
 	    // Configure verbose debug logging.
 	    L.enableDebugLogging(true);
@@ -81,7 +77,7 @@ public class WelcomeStarBuck extends Activity {
 	              // Note that beacons reported here are already sorted by estimated
 	              // distance between device and beacon.
 	              getActionBar().setSubtitle("Found beacons: " + beacons.size());
-	              adapter.replaceWith(beacons);
+
 	            }
 	          });
 	        }
@@ -164,13 +160,11 @@ public class WelcomeStarBuck extends Activity {
       }
     }
 
+
+	
     @Override
     protected void onStop() {
-      try {
-        beaconManager.stopRanging(ALL_ESTIMOTE_BEACONS_REGION);
-      } catch (RemoteException e) {
-        Log.d(TAG, "Error while stopping ranging", e);
-      }
+  	  beaconManager.disconnect();
 
       super.onStop();
     }
@@ -189,8 +183,6 @@ public class WelcomeStarBuck extends Activity {
     }
     
     private void connectToService() {
-        getActionBar().setSubtitle("Scanning...");
-        adapter.replaceWith(Collections.<Beacon>emptyList());
         beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
           @Override
           public void onServiceReady() {
@@ -256,7 +248,9 @@ public class WelcomeStarBuck extends Activity {
         	Intent intent = new Intent(WelcomeStarBuck.this, WelcomeStarBuck.class);
 		    startActivity(intent); 
         }
-*/      
+*/
+        
+
         long currenttime=System.currentTimeMillis();
         
         if (currenttime-initialtime > 60000)
@@ -275,5 +269,18 @@ public class WelcomeStarBuck extends Activity {
 	        initialtime= System.currentTimeMillis(); 
         }
 
+        /*
+        if (counter%2==0)
+        {
+        	Intent intent = new Intent(WelcomeStarBuck.this, MenuStarBuck.class);
+		    startActivity(intent); 
+        }
+        else if (counter%2==1)
+        {
+        	Intent intent = new Intent(WelcomeStarBuck.this, ReceiptStarBuck.class);
+		    startActivity(intent);         	
+        }
+        counter++;
+        */
       }    
 }

@@ -41,6 +41,17 @@
         android:textSize="17sp"
         android:text="随便逛逛" 
         android:onClick="startbutton"/>
-
-
+    
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_style_one"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:text="Beacon管理" 
+        android:onClick="startBeaconbutton"/>
+        
 </LinearLayout>
