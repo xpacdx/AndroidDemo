@@ -65,8 +65,18 @@ public class LeDeviceListAdapter extends BaseAdapter {
 	private void bind(Beacon beacon, View view) {
 
 		ViewHolder holder = (ViewHolder) view.getTag();
+		if (beacon.getMajor()==1 || beacon.getMajor()==0)
+		{
+			holder.nameTextView.setText("Name: " + "Meluo beacons");	
+		}
+		else
+		{
+			holder.nameTextView.setText("Name: " + beacon.getName());	
+		}
+
 		holder.macTextView.setText(String.format("MAC: %s (%.2fm)", beacon.getMacAddress(),
 				Utils.computeAccuracy(beacon)));
+		holder.uuidTextView.setText("UUID: " + beacon.getProximityUUID());		
 		holder.majorTextView.setText("Major: " + beacon.getMajor());
 		holder.minorTextView.setText("Minor: " + beacon.getMinor());
 		holder.measuredPowerTextView.setText("MPower: " + beacon.getMeasuredPower());
@@ -83,16 +93,18 @@ public class LeDeviceListAdapter extends BaseAdapter {
 	}
 
 	static class ViewHolder {
-
+		final TextView nameTextView;
 		final TextView macTextView;
+		final TextView uuidTextView;
 		final TextView majorTextView;
 		final TextView minorTextView;
 		final TextView measuredPowerTextView;
 		final TextView rssiTextView;
 
 		ViewHolder(View view) {
-
+			nameTextView = (TextView) view.findViewWithTag("name");
 			macTextView = (TextView) view.findViewWithTag("mac");
+			uuidTextView = (TextView) view.findViewWithTag("uuid");			
 			majorTextView = (TextView) view.findViewWithTag("major");
 			minorTextView = (TextView) view.findViewWithTag("minor");
 			measuredPowerTextView = (TextView) view.findViewWithTag("mpower");
