@@ -38,7 +38,7 @@
         >
         <activity
         	android:theme="@style/WelcomeTheme"
-            android:name="com.example.androiddemo.WelcomePage">
+            android:name="com.meluo.androiddemo.WelcomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -49,63 +49,63 @@
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.LoginPage">
+        	android:name="com.meluo.androiddemo.LoginPage">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.FirstPage">
+        	android:name="com.meluo.androiddemo.FirstPage">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.WelcomeStarBuck">
+        	android:name="com.meluo.androiddemo.WelcomeStarBuck">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.MenuStarBuck">
+        	android:name="com.meluo.androiddemo.MenuStarBuck">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.ReceiptStarBuck">
+        	android:name="com.meluo.androiddemo.ReceiptStarBuck">
         </activity>
         
         <activity 
         	android:label="@string/shopping_list"
         	android:theme="@style/FirstPageStyle"
-        	android:name="com.example.androiddemo.Person">
+        	android:name="com.meluo.androiddemo.Person">
         	
         </activity>
         <activity
-            android:name="com.example.androiddemo.AllDemosActivity"
+            android:name="com.meluo.androiddemo.AllDemosActivity"
             android:label="Meluo Beacon Demos"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.androiddemo.ListBeaconsActivity"
+            android:name="com.meluo.androiddemo.ListBeaconsActivity"
             android:label="Select Beacon"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.androiddemo.DistanceBeaconActivity"
+            android:name="com.meluo.androiddemo.DistanceBeaconActivity"
             android:label="Distance Demo"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.androiddemo.NotifyDemoActivity"
+            android:name="com.meluo.androiddemo.NotifyDemoActivity"
             android:label="Notify Demo"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.androiddemo.CharacteristicsDemoActivity"
+            android:name="com.meluo.androiddemo.CharacteristicsDemoActivity"
             android:label="Characteristics Demo"
             android:screenOrientation="portrait" />
                 
     <!-- Estimote service responsible for scanning beacons. -->
-        <service android:name="com.estimote.sdk.service.BeaconService"
+        <service android:name="com.meluo.sdk.service.BeaconService"
              android:exported="false"/>        	
     </application>
 
